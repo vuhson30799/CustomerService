@@ -13,7 +13,7 @@
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/create-customer}" th:object="${customer}" method="post">
+<form th:action="@{/save-customer}" th:object="${customer}" method="get">
     <table>
         <tr>
             <td>First name:</td>
@@ -24,10 +24,6 @@
             <td><input type="text" th:field="*{lastName}"/></td>
         </tr>
         <tr>
-            <td></td>
-            <td><input type="submit" value="Create customer"></td>
-        </tr>
-        <tr>
             <td>Province:</td>
             <td>
                 <select th:field="*{province}">
@@ -35,6 +31,11 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create customer"></td>
+        </tr>
+
     </table>
 </form>
 </body>

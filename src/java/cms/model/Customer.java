@@ -1,4 +1,6 @@
 package cms.model;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
     @Entity
     @Table(name = "customers")
@@ -12,9 +14,10 @@ import javax.persistence.*;
 
         public Customer() {}
 
-        public Customer(String firstName, String lastName) {
+        public Customer(String firstName, String lastName,Province province) {
             this.firstName = firstName;
             this.lastName = lastName;
+            this.province = province;
         }
 
         @ManyToOne

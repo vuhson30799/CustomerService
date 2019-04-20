@@ -44,4 +44,10 @@ public class Province {
     public void setCustomers(List<Customer> customers) {
         this.customers = customers;
     }
+
+    @Override
+    public String toString (){
+        return this.name;
+    }
+
 }
